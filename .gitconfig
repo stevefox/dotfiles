@@ -1,0 +1,45 @@
+[core]
+	editor = emacs
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+
+[alias]
+    ribbon = tag --force _ribbon origin/dev
+    catchup = log --patch --reverse --topo-order _ribbon..origin/dev
+    st = status
+    ds = diff --cached
+    df = diff
+    dh = diff HEAD~1
+    pc = reset HEAD^
+    co = checkout
+    popcommit = reset HEAD^
+    addbb = "!f() { git remote add bb bb-sdf:stephenfox/$1; }; f"
+    sh = "!f() { git rev-parse --verify --short $1; }; f"
+
+[user]
+	name = Stephen Fox
+	email = social@stevefox.io
+
+[merge]
+	conflictstyle = merge
+	tool = meld
+
+[core]
+	excludesfile = /home/stephen/.gitignore_global
+
+[gui]
+	warndetachedcommit = true
+	fontui = -family \"DejaVu Sans\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"DejaVu Sans Mono\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
+
+[commit]
+	template = /home/stephen/.gitstuff/.gitmessage.txt
+
+[color]
+        ui = true
+
+[apply]
+	whitespace = fix
+
+[push]
+	default = current
