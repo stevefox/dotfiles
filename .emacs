@@ -169,3 +169,7 @@
 
 (setq-default js-indent-level 2)
 (setq-default typescript-indent-level 4)
+
+;; copy/paste into emacs causing some annoying indentation issues
+;; http://stackoverflow.com/questions/27736107/emacs-started-adding-extra-tabs-in-when-i-paste-into-it-on-os-x
+(setq electric-indent-mode nil)
