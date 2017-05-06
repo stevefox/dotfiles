@@ -11,7 +11,7 @@ These are my dotfiles for a peek into how I manage my environment.
    - git sh: Gives a short sha1 hash to reference a specific commit.
  - i3config: maps to ~/.config/i3/config. Configuration file for i3 window manager, which is nice. Requires installing a few packages from apt:
     - i3-wm
-    - suckess-tools
+    - suckless-tools
     - i3lock
     - i3status
     - network-manager-gnome
