@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# http://reinout.vanrees.org/weblog/2010/05/11/pep8-pyflakes-emacs.html
+
+pyflakes $1
+echo "## pyflakes above, pep8 below ##"
+pep8 --repeat $1

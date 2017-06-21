@@ -1,0 +1,14 @@
+#!/bin/bash
+
+EMACSDAEMON="$(ps -ax |grep -v grep | grep "emacs --daemon")"
+
+echo ${EMACSDAEMON}
+
+if [[ -z ${EMACSDAEMON} ]];
+then
+  echo "Starting daemon"
+  emacs --daemon
+fi;
+
+echo "Starting emacs client";
+exec emacsclient -nw "$@"
