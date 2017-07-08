@@ -135,3 +135,5 @@ fi
 ###-tns-completion-end-###
 
 export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+
+[[ -z "$TMUX" ]] && exec tmux
