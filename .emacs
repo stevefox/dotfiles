@@ -51,21 +51,11 @@
 (setq auto-fill-mode t)
 (global-font-lock-mode 1)
 
-;; set f4 to be goto-line
-(global-set-key [f4] 'goto-line)
-
-;; set f3 to be shell
-(global-set-key [f3] 'eshell)
-
-;;set f5 to be find and replace
-(global-set-key [f5] 'query-replace)
-
-;;set f6 to be end of buffer key
-(global-set-key [f6] 'end-of-buffer)
-
-;;go to line
+;; shortcuts I can't live without
 (global-set-key "\C-xg" 'goto-line)
-(global-set-key "\C-xw" 'delete-trailing-whitespace)
+(global-set-key "\C-xr" 'query-replace)
+(global-set-key "\C-xe" 'end-of-buffer)
+(global-set-key "\C-f" 'ffap)
 
 ;;get rid of that damn useless menu bar
 (menu-bar-mode -1)
