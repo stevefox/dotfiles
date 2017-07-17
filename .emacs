@@ -1,15 +1,16 @@
-; do something automatically on start template function
-;; (setq auto-mode-alist (cons '("README" . text-mode) auto-mode-alist))
+;; Setup package repositories
+(require 'package)
+(add-to-list 'package-archives
+    '("melpa" .
+      "http://melpa.org/packages/"))
+(package-initialize)
 
-;;must have jabber.el installed. look in the repository for this package
-(setq jabber-account-list'(
-			   ("myemailaddress@gmail.com"
-			   (:password . nil)
-			   (:network-server . "talk.google.com")
-			   (:port . 443)
-			   (:connection-type . ssl)
+;; Project management
+(require 'helm-projectile)
+(require 'projectile)
+(require 'jedi)
 
-			   )))
+
 ;; Setup email sending
 (require 'smtpmail)
 (require 'starttls)
