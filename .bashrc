@@ -136,4 +136,5 @@ fi
 
 export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 
+export TERM=xterm-256color
 [[ -z "$TMUX" ]] && exec tmux
